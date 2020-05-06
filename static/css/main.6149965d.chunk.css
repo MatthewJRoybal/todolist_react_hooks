@@ -1,0 +1,2 @@
+.app *{font-family:cursive}h1,h2{text-align:center}button,input,span{font-size:1.25rem}form,ul{width:400px;margin-right:auto;margin-left:auto;padding:0}form,li{padding:0;display:flex;align-items:center;justify-content:space-between}li{margin:10px 0}button{font-weight:700;border:1px solid #a9a9a9;border-radius:5px;padding:5px 10px}button.submit{color:#fff;background-color:#00f}button.delete{color:red;border:1px solid red;background-color:#fff}button.delete:hover{color:#fff;background-color:red}
+/*# sourceMappingURL=main.6149965d.chunk.css.map */
