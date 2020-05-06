@@ -1,43 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import './styles.css';
+import React, { useState } from "react"
+import "./styles.css"
 
-import Form from './form';
-import Items from './items';
+import Form from "./form"
+import List from "./list"
 
 const App = () => {
-
-  const [loads, setLoads] = useState(true);
-  const [value, setValue] = useState('');
-  const [items, setItems] = useState([ "Eggs", "Milk", "Toilet Paper" ]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoads(false), 5000)
-    return () => clearTimeout(timer);
-  }, []);
+  const [value, setValue] = useState("")
+  const [list, setList] = useState(["Eggs", "Milk", "Toilet Paper"])
 
   const handleChange = event => setValue(event.target.value)
-
-  const handleDelete = item => setItems(items.filter(value => item !== value))
-
+  const handleDelete = item => setList(list.filter(value => item !== value))
   const handleSubmit = (event, value) => {
-    event.preventDefault();
-    setItems(items => [...items, value]);
-    setValue('');
+    event.preventDefault()
+    setList(list => [...list, value])
+    setValue("")
   }
 
-  const html = loads ? <div data-testid="spinner">Spinner</div> :
+  return (
     <div data-testid="app" className="app">
       <h1>State Management Using React Hooks</h1>
       <h2>A friendly to do list example</h2>
-      <Form handleChange={handleChange} handleSubmit={handleSubmit} value={value} />
-      <Items handleDelete={handleDelete} items={items} />
+      <Form
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        value={value}
+      />
+      <List handleDelete={handleDelete} list={list} />
     </div>
-
-    console.log(loads);
-
-  return html;
-
-
+  )
 }
 
-export default App;
+export default App
