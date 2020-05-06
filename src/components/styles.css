@@ -1,0 +1,54 @@
+/* Set font family */
+.app * {
+  font-family: cursive;
+}
+/* Center align presentation */
+h1, h2 {
+  text-align: center;
+}
+/* Easier to read */
+span, input, button {
+  font-size: 1.25rem;
+}
+/* Decrease width, center, remove built-in padding */
+ul, form {
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+/* Center items vertically and space evenly */
+li, form {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  margin: 10px 0;
+}
+/* Improve button styling */
+button {
+  /* color: white; */
+  font-weight: bold;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+/* Submit button color */
+button.submit {
+  color: white;
+  background-color: blue;
+}
+/* Delete button color */
+button.delete {
+  color: red;
+  border: 1px solid red;
+  background-color: white;
+}
+/* Delete button color on hover */
+button.delete:hover {
+  color: white;
+  background-color: red;
+}
